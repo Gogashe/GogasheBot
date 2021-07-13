@@ -1,0 +1,13 @@
+D:\C#\GogasheBot\GogasheBot\bin\Debug\GogasheBot.exe.config
+D:\C#\GogasheBot\GogasheBot\bin\Debug\GogasheBot.exe
+D:\C#\GogasheBot\GogasheBot\bin\Debug\GogasheBot.pdb
+D:\C#\GogasheBot\GogasheBot\bin\Debug\Newtonsoft.Json.dll
+D:\C#\GogasheBot\GogasheBot\bin\Debug\Telegram.Bot.dll
+D:\C#\GogasheBot\GogasheBot\bin\Debug\Newtonsoft.Json.xml
+D:\C#\GogasheBot\GogasheBot\bin\Debug\Telegram.Bot.xml
+D:\C#\GogasheBot\GogasheBot\obj\Debug\GogasheBot.csproj.CoreCompileInputs.cache
+D:\C#\GogasheBot\GogasheBot\obj\Debug\GogasheBot.csproj.CopyComplete
+D:\C#\GogasheBot\GogasheBot\obj\Debug\GogasheBot.exe
+D:\C#\GogasheBot\GogasheBot\obj\Debug\GogasheBot.pdb
+D:\C#\GogasheBot\GogasheBot\bin\Debug\MihaZupan.HttpToSocks5Proxy.dll
+D:\C#\GogasheBot\GogasheBot\obj\Debug\GogasheBot.csprojAssemblyReference.cache
