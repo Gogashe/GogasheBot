@@ -11,8 +11,7 @@ namespace GogasheBot.TextCommands
         {
             try
             {
-                string[] Pastas = new string[31];
-                Pastas = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\Pastes");
+                string[] Pastas = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\Pastes");
                 Random rand = new Random((int)DateTime.Now.Ticks);
                 string Pasta = Pastas[rand.Next(0, Pastas.Length)];
                 StreamReader ReadPasta = new StreamReader(Pasta);
