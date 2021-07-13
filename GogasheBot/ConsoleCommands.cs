@@ -4,21 +4,15 @@ namespace GogasheBot
 {
     class ConsoleCommands
     {
-        public void Send(string Comm)
+        public void Send(string Command)
         {
-            long id;
-            switch (StringsParcer.GetCommand(ref Comm))
+            switch (StringsParcer.GetCommand(ref Command))
             {
-                case "/say" :
+                case "/say":
                     {
                         try
                         {
-                            id = Convert.ToInt64(StringsParcer.GetId(ref Comm));
-                            Sender.SendMessage(id, Comm);
-                            string text = $"Successfully send {id} {Comm}";
-                            Console.WriteLine(text);
-                            Log.SWrite(text);
-                            Comm = null;
+                            Command_Say(Command);
                         }
                         catch (FormatException)
                         {
@@ -28,16 +22,28 @@ namespace GogasheBot
                     }
                 case "/sticker":
                     {
-                        id = Convert.ToInt64(StringsParcer.GetId(ref Comm));
-                        Sender.SendSticker(id, Comm);
-                        string text = $"Successfully send {id} {Comm}";
-                        Console.WriteLine(text);
-                        Log.SWrite(text);
-                        Comm = null;
+                        Command_Sticker(Command);
                         break;
                     }
             }
         }
-
+        private void Command_Say(string Command)
+        {
+            long id = Convert.ToInt64(StringsParcer.GetId(ref Command));
+            Sender.SendMessage(id, Command);
+            string text = $"Successfully send {id} {Command}";
+            Console.WriteLine(text);
+            Log.SWrite(text);
+            Command = null;
+        }
+        private void Command_Sticker(string Command)
+        {
+            long id = Convert.ToInt64(StringsParcer.GetId(ref Command));
+            Sender.SendSticker(id, Command);
+            string text = $"Successfully send {id} {Command}";
+            Console.WriteLine(text);
+            Log.SWrite(text);
+            Command = null;
+        }
     }
 }

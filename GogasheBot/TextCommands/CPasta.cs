@@ -18,18 +18,21 @@ namespace GogasheBot.TextCommands
                 string RawText = ReadPasta.ReadToEnd();
                 ReadPasta.Close();
                 List<string> Messages = new List<string>();
-                try
+                while (true)
                 {
-                    while (Exists(RawText[4096]))
+                    try
                     {
-                        Messages.Add(RawText.Remove(0, 4095));
+                        char t = RawText[4097];
+                        Messages.Add(RawText.Remove(0, 4096));
                         RawText = RawText.Remove(4096);
                     }
+                    catch(IndexOutOfRangeException)
+                    {
+                        Messages.Add(RawText);
+                        break;
+                    }
                 }
-                catch (ArgumentOutOfRangeException)
-                {
-                    Messages.Add(RawText);
-                }
+                Messages.Reverse();
                 foreach(string i in Messages){
                     Sender.SendMessage(msg, i);
                 }
