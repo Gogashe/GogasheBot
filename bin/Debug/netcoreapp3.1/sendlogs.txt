@@ -1,0 +1,3 @@
+[14.07.2021 19:20:41] Successfully send 457957611 Хуй
+[14.07.2021 19:21:08] Successfully send 457957611 - (@Gogashe) song:'D:\Program files\GogasheBot\GogasheBot\bin\Debug\netcoreapp3.1\Hardbass\DJ Blyatman ft. Hard Bass School - Blast.mp3'
+[14.07.2021 19:23:38] Successfully send 457957611 - (@Gogashe) song:'D:\Program files\GogasheBot\GogasheBot\bin\Debug\netcoreapp3.1\Hardbass\XS Project - Наркотик - кал.mp3'
