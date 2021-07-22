@@ -7,7 +7,7 @@ namespace GogasheBot
 {
     static class Sender
     {
-        private static readonly ITelegramBotClient botClient = new TelegramBotClient(new StreamReader(Directory.GetCurrentDirectory() + @"\Docs\Token.txt").ReadToEnd());
+        private static readonly ITelegramBotClient botClient = new TelegramBotClient(new StreamReader(Directory.GetCurrentDirectory() + @"/Docs/Token.txt").ReadToEnd());
 
         public static void SendMessage(long ChatId, string text)
         {

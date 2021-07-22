@@ -8,7 +8,7 @@ namespace GogasheBot.TextCommands
     {
         public void SendHB(Message msg)
         {
-            string[] HB = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\Hardbass");
+            string[] HB = Directory.GetFiles(Directory.GetCurrentDirectory() + @"/Hardbass");
             Random rand = new Random((int)DateTime.Now.Ticks);
             string Song = HB[rand.Next(0, HB.Length)];
             try

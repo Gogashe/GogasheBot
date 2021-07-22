@@ -118,7 +118,7 @@ namespace GogasheBot
 
         private void WorkOnSticker(Message msg)
         {
-            long StickerChatId = Convert.ToInt64(new StreamReader(Directory.GetCurrentDirectory() + @"\Docs\StickerChatId.txt").ReadToEnd());
+            long StickerChatId = Convert.ToInt64(new StreamReader(Directory.GetCurrentDirectory() + @"/Docs/StickerChatId.txt").ReadToEnd());
             Sender.SendSticker(StickerChatId, new InputOnlineFile(msg.Sticker.FileId));
             Sender.SendMessage(StickerChatId, $"Send {msg.From.Id} (@{msg.From.Username})");
             string text = $"{msg.Chat.Id} - (@{msg.From.Username}) Sent sticker:{msg.Sticker.FileId}";
@@ -165,7 +165,7 @@ namespace GogasheBot
 
         private void SendPhoto(InputOnlineFile image, Message msg)
         {
-            long ImageChatId = Convert.ToInt64(new StreamReader(Directory.GetCurrentDirectory() + @"\Docs\ImageChatId.txt").ReadToEnd());
+            long ImageChatId = Convert.ToInt64(new StreamReader(Directory.GetCurrentDirectory() + @"/Docs/ImageChatId.txt").ReadToEnd());
             Sender.SendPhoto(ImageChatId, image);
             Sender.SendMessage(ImageChatId, $"Send {msg.From.Id} (@{msg.From.Username})");
             string text = $"{msg.Chat.Id} - (@{msg.From.Username}) Sent image";
