@@ -17,21 +17,26 @@ namespace GogasheBot.TextCommands
                 StreamReader ReadPasta = new StreamReader(Pasta);
                 string RawText = ReadPasta.ReadToEnd();
                 ReadPasta.Close();
+                List<string> Frames = new List<string>();
                 while (RawText.Length > 4096)
                 {
                     try
                     {
-                        Sender.SendMessage(msg, new string(RawText.Remove(4096)));
-                        RawText = RawText.Remove(0, 4096);
+                        int i = 4095;
+                        while (RawText[i]!=' ')
+                        {
+                            i--;
+                        }
+                        Frames.Add(RawText.Remove(i));
+                        RawText = RawText.Remove(0,i);
                     }
                     catch (IndexOutOfRangeException)
                     {
 
                     }
                 }
-
-                Sender.SendMessage(msg, RawText);
-
+                Frames.Add(RawText);
+                Sender.SendMessage(msg, Frames);
             }
             catch (IOException)
             {

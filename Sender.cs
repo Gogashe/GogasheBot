@@ -1,5 +1,7 @@
 ﻿using System.IO;
 using Telegram.Bot;
+using System.Threading;
+using System.Collections.Generic;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.InputFiles;
 
@@ -17,6 +19,15 @@ namespace GogasheBot
         public static void SendMessage(Message msg, string text)
         {
             botClient.SendTextMessageAsync(msg.Chat.Id, text);
+        }
+
+        public static void SendMessage(Message msg, List<string> text)
+        {
+            foreach (string i in text){
+                botClient.SendTextMessageAsync(msg.Chat.Id, i);
+                Thread.Sleep(500);
+            }
+
         }
 
         public static void SendMessage(Message msg, FileStream fs)
